@@ -1,0 +1,15 @@
+[package]
+name = "optimizer-wasm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# WASMとJSの橋渡しをするコアライブラリ
+wasm-bindgen = "0.2"
+# JSの標準オブジェクト（Float64Arrayなど）を扱うライブラリ
+js-sys = "0.3"
+# 最新の数値計算ソルバー
+clarabel = "0.11.1"
